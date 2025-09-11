@@ -1,0 +1,15 @@
+{
+  "packageDirectories": [
+    {
+      "path": "summit-events-agentforce-app"
+    },
+    {
+      "path": "force-app",
+      "default": true
+    }
+  ],
+  "name": "sfdo-summit-events-agentforce",
+  "namespace": "",
+  "sfdcLoginUrl": "https://login.salesforce.com",
+  "sourceApiVersion": "64.0"
+}

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Transform_Event_to_Apex_Define_Type</name>
+        <label>Transform Event to Apex Define Type</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <actionName>AgentSummitEventQuestion</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>Assign_Output</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>events</name>
+            <value>
+                <elementReference>Get_Parent_Event_Details</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>AgentSummitEventQuestion</nameSegment>
+        <offset>0</offset>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <apiVersion>64.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Assign_Output</name>
+        <label>Assign Output</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>OUTPUT_QuestionsToAskRegistrant</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Transform_Event_to_Apex_Define_Type.question</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <description>Gets the Standard Questions to be asked for the Registrant. This Record is a summit__Summit_Events__c which contains all the questions about the event</description>
+    <environments>Default</environments>
+    <interviewLabel>AgentAction: Get Questions To Ask Registrant {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>AgentAction: Get Questions To Ask Registrant</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Get parent event with all the standard questions for event registration</description>
+        <name>Get_Parent_Event_Details</name>
+        <label>Get Parent Event Details</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Transform_Event_to_Apex_Define_Type</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Parent_Event_Identifier.summit__Event__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>summit__Summit_Events__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>Get the Instance Event which is the parent record that contains the standard questions</description>
+        <name>Get_Parent_Event_Identifier</name>
+        <label>Get Parent Event Identifier</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_Parent_Event_Details</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>INPUT_InstanceEventId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>summit__Summit_Events_Instance__c</object>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>summit__Event__c</queriedFields>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Parent_Event_Identifier</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>This is the Instance Event Id that the user selects. It will always match a record on summit__Summit_Events_Instance__c</description>
+        <name>INPUT_InstanceEventId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Questions to ask registrant</description>
+        <name>OUTPUT_QuestionsToAskRegistrant</name>
+        <apexClass>AgentSummitEventQuestion</apexClass>
+        <dataType>Apex</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>

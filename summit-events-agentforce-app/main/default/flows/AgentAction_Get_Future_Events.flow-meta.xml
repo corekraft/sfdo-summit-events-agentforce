@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>64.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Assign_Record</name>
+        <label>Assign Record</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>OUTPUT_Event</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_Active_Future_Sessions</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <description>Gets All the future dated events that are active and can be registered to</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>FROM_Date</name>
+        <dataType>Date</dataType>
+        <expression>DATEVALUE({!INPUT_Date})</expression>
+    </formulas>
+    <formulas>
+        <description>Today&apos;s Date</description>
+        <name>Today</name>
+        <dataType>Date</dataType>
+        <expression>TODAY()</expression>
+    </formulas>
+    <interviewLabel>AgentAction: Get Future Events {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>AgentAction: Get Future Events</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Get Active future dated sessions. Sessions are events that are available for booking</description>
+        <name>Get_Active_Future_Sessions</name>
+        <label>Get Active Future Sessions</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Assign_Record</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>summit__Instance_Start_Date__c</field>
+            <operator>GreaterThanOrEqualTo</operator>
+            <value>
+                <elementReference>FROM_Date</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>summit__Active_Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Active</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>summit__Current_Available_Capacity__c</field>
+            <operator>GreaterThanOrEqualTo</operator>
+            <value>
+                <numberValue>1.0</numberValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>summit__Summit_Events_Instance__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Active_Future_Sessions</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>A date in MM/DD/YYY format. Used as a qualification criteria to search for events</description>
+        <name>INPUT_Date</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Available events thats future dated that are active and can accept a registration</description>
+        <name>OUTPUT_Event</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+        <objectType>summit__Summit_Events_Instance__c</objectType>
+    </variables>
+    <variables>
+        <description>The event instance id found from the search</description>
+        <name>OUTPUT_EventId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>

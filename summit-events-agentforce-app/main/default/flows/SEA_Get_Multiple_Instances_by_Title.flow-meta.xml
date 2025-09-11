@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>64.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <description>when there are more than one instances with the same title</description>
+    <environments>Default</environments>
+    <interviewLabel>SEA - Get Multiple Instances by Title {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>SEA - Get Multiple Instances by Title</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Finds Instances by Title</description>
+        <name>Query_Instance_Title</name>
+        <label>Query Instance Title</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>summit__Instance_Title__c</field>
+            <operator>Contains</operator>
+            <value>
+                <elementReference>varTitle</elementReference>
+            </value>
+        </filters>
+        <object>summit__Summit_Events_Instance__c</object>
+        <outputReference>varRecords</outputReference>
+        <queriedFields>summit__Event_Name__c</queriedFields>
+        <queriedFields>summit__Instance_Title__c</queriedFields>
+        <sortField>summit__Instance_Start_Date__c</sortField>
+        <sortOrder>Asc</sortOrder>
+    </recordLookups>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Query_Instance_Title</targetReference>
+        </connector>
+    </start>
+    <status>Draft</status>
+    <variables>
+        <description>Record ID of the related instance</description>
+        <name>varRecordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <description>all instance records meeting the criteria</description>
+        <name>varRecords</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+        <objectType>summit__Summit_Events_Instance__c</objectType>
+    </variables>
+    <variables>
+        <description>Title of the Instance related to the Event</description>
+        <name>varTitle</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>
