@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Create a child instance record to create an instance of an event.</description>
+    <invocationTarget>Summit_Event_Instance_Create_a_child_instance_ALF</invocationTarget>
+    <invocationTargetType>flow</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+    <mappingAttributes>
+        <label>eventrecordid</label>
+        <name>input_eventrecordid</name>
+        <parameterName>eventrecordid</parameterName>
+        <parameterType>input</parameterType>
+    </mappingAttributes>
+    <mappingAttributes>
+        <label>instancerecordid</label>
+        <name>output_instancerecordid</name>
+        <parameterName>instancerecordid</parameterName>
+        <parameterType>output</parameterType>
+    </mappingAttributes>
+    <masterLabel>SEA - Create Instance</masterLabel>
+    <progressIndicatorMessage>Creating instance</progressIndicatorMessage>
+</GenAiFunction>

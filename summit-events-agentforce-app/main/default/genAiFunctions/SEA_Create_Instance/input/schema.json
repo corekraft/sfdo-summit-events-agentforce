@@ -1,0 +1,66 @@
+{
+  "required" : [ "eventrecordid" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "InstanceName" : {
+      "title" : "InstanceName",
+      "description" : "Name of the event instance",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "capacity" : {
+      "title" : "capacity",
+      "description" : "Capacity of the event instance",
+      "lightning:type" : "lightning__numberType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "enddate" : {
+      "title" : "enddate",
+      "description" : "End date of the instance",
+      "lightning:type" : "lightning__dateType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "endtime" : {
+      "title" : "endtime",
+      "description" : "End time of the instance",
+      "lightning:type" : "lightning__timeType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "eventrecordid" : {
+      "title" : "eventrecordid",
+      "description" : "Event ID to create instance on. Should be retrieved from a context variable earlier in the flow.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "parentrecord" : {
+      "title" : "parentrecord",
+      "description" : "Parent Event record. Unused",
+      "lightning:type" : "lightning__recordInfoType",
+      "lightning:sObjectInfo" : {
+        "apiName" : "summit__Summit_Events__c"
+      },
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "startdate" : {
+      "title" : "startdate",
+      "description" : "Start date of the instance",
+      "lightning:type" : "lightning__dateType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "starttime" : {
+      "title" : "starttime",
+      "description" : "Start time of the instance",
+      "lightning:type" : "lightning__timeType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

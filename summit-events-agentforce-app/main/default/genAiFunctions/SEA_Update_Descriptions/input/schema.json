@@ -1,0 +1,21 @@
+{
+  "required" : [ "eventDescription", "eventId" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "eventDescription" : {
+      "title" : "eventDescription",
+      "description" : "Description of the event, provided by the user.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "eventId" : {
+      "title" : "eventId",
+      "description" : "Input ID of the event to update.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

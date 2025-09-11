@@ -1,0 +1,35 @@
+{
+  "required" : [ "Name" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "Name" : {
+      "title" : "Name",
+      "description" : "Name of the event.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "audience" : {
+      "title" : "audience",
+      "description" : "Desired audience for the event.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "locationtype" : {
+      "title" : "locationtype",
+      "description" : "Location type for the event.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "type" : {
+      "title" : "type",
+      "description" : "Event type for the event.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

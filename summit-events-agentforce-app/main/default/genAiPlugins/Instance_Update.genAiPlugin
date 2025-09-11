@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <aiPluginUtterances>
+        <developerName>utterance_0_1757622569795</developerName>
+        <language>en_US</language>
+        <masterLabel>utterance_0_1757622569795</masterLabel>
+        <utterance>Update the active status of the instance.
+Make the instance status Active.
+Set the instance as ready for registration.</utterance>
+    </aiPluginUtterances>
+    <canEscalate>false</canEscalate>
+    <description>Handles user requests related to updating an existing instance, such as modifying its configuration or details.</description>
+    <developerName>Instance_Update</developerName>
+    <genAiFunctions>
+        <functionName>SEA_Update_Event_Instance</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>SEA_Get_Multiple_Instances_by_Title</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>Ask the user for specific details about the event instance title they want to update, such as its date or title. Do not ask for its ID. Do not show API names, ask only in user friendly or field label names. Do not ask for varTitle, just ask for Title of Instance.</description>
+        <developerName>instruction_0_1757622106712</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_0_1757622106712</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Confirm the type of update the user wants to perform, such as configuration changes or detail modifications or active status changes.</description>
+        <developerName>instruction_1_1757622106712</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_1_1757622106712</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Provide step-by-step guidance for completing the update, including any required inputs or actions. Only provide this information if they need to complete the steps manually.</description>
+        <developerName>instruction_2_1757622106712</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_2_1757622106712</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>If the update cannot be completed, inform the user and suggest performing the update directly on the record manually.</description>
+        <developerName>instruction_3_1757622106712</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_3_1757622106712</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>If the query results in multiple results, confirm which result the user wanted by asking for additional information like the date or the event name.</description>
+        <developerName>instructions_0_1757627378410</developerName>
+        <language>en_US</language>
+        <masterLabel>instructions_0_1757627378410</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Instance Update</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is only to assist users in updating an existing instance by gathering necessary details, validating the request, and guiding them through the update process without making changes outside the scope of instance updates.</scope>
+</GenAiPlugin>

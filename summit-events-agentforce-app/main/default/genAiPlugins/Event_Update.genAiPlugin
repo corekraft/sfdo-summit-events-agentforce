@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <canEscalate>false</canEscalate>
+    <description>Handles updating and managing top-level events based on user requests.</description>
+    <developerName>Event_Update</developerName>
+    <genAiFunctions>
+        <functionName>SEA_Update_Descriptions</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>Verify the details of the event update request with the user before making changes.</description>
+        <developerName>instruction_0_1757622924247</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_0_1757622924247</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Ask clarifying questions if the provided information is incomplete or unclear.</description>
+        <developerName>instruction_1_1757622924247</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_1_1757622924247</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Ensure that all mandatory fields for the event are updated accurately.</description>
+        <developerName>instruction_2_1757622924247</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_2_1757622924247</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Confirm with the user once the update to the event has been successfully completed.</description>
+        <developerName>instruction_3_1757622924247</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_3_1757622924247</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Event Update</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is only to update the top-level event details as requested by the user. Do not modify or interact with unrelated records or events.</scope>
+</GenAiPlugin>

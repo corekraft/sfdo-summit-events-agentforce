@@ -1,0 +1,14 @@
+{
+  "required" : [ "varTitle" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "varTitle" : {
+      "title" : "varTitle",
+      "description" : "Title of the Instance related to the Event",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

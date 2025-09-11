@@ -1,0 +1,14 @@
+{
+  "required" : [ "INPUT_InstanceEventId" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "INPUT_InstanceEventId" : {
+      "title" : "INPUT_InstanceEventId",
+      "description" : "This is the Instance Event Id that the user selects from the previous step. It will always match a record on summit__Summit_Events_Instance__c",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

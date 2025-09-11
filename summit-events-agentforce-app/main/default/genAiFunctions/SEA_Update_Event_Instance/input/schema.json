@@ -1,0 +1,21 @@
+{
+  "required" : [ "InstanceRecordId", "Updated_Status" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "InstanceRecordId" : {
+      "title" : "InstanceRecordId",
+      "description" : "ID of the Instance to update",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Updated_Status" : {
+      "title" : "Updated_Status",
+      "description" : "The updated status of the event",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

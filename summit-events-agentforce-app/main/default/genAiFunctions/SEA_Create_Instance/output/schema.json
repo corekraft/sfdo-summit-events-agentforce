@@ -1,0 +1,36 @@
+{
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "ID" : {
+      "title" : "ID",
+      "description" : "Unused",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : false,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "InstancerecordId2" : {
+      "title" : "InstancerecordId2",
+      "description" : "Object record for the instance record ID.",
+      "lightning:type" : "lightning__recordInfoType",
+      "lightning:sObjectInfo" : {
+        "apiName" : "summit__Summit_Events_Instance__c"
+      },
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "instancerecordid" : {
+      "title" : "instancerecordid",
+      "description" : "18-character record ID of the instance record that was created.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : false,
+      "copilotAction:useHydratedPrompt" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

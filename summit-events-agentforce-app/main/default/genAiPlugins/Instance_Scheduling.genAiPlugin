@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <canEscalate>false</canEscalate>
+    <description>Schedule event instances efficiently for Summit Events. Instances are also known as occurences.</description>
+    <developerName>Instance_Scheduling</developerName>
+    <genAiFunctions>
+        <functionName>SEA_Create_Instance</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>If the query is about scheduling a new event instance, use the appropriate scheduling action.</description>
+        <developerName>instruction_0_1757617035647</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_0_1757617035647</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>If the query is about updating an existing event instance, use the update scheduling action.</description>
+        <developerName>instruction_1_1757617035647</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_1_1757617035647</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>If the query is about retrieving event instance information, use the get instance details action.</description>
+        <developerName>instruction_2_1757617035647</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_2_1757617035647</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Instance Scheduling</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is to only manage the scheduling of event instances, including setting dates, times, and locations for each instance.</scope>
+</GenAiPlugin>

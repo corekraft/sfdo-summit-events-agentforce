@@ -1,0 +1,14 @@
+{
+  "required" : [ "INPUT_Date" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "INPUT_Date" : {
+      "title" : "INPUT_Date",
+      "description" : "A date in MM/DD/YYY format. Used as a qualification criteria to search for events",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}
