@@ -46,3 +46,27 @@ $RECYCLE.BIN/
 **/__pycache__/
 **/.venv/
 **/venv/
+
+# Added by Illuminated Cloud
+/IlluminatedCloud/
+/out/
+target/
+/.illuminatedCloud/
+**/tsconfig*.json
+**/*.tsbuildinfo
+
+# Editors
+*.sublime-project
+*.sublime-workspace
+.vscode
+.idea
+.project
+.settings
+
+# Salesforce / SFDX / CCI
+.cci
+/src.orig
+/src
+
+# CumulusCI
+/test_results.*
