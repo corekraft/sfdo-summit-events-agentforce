@@ -3,7 +3,7 @@ project:
   name: sfdo-summit-events-agentforce
   package:
     name: sfdo-summit-events-agentforce
-    api_version: '64.0'
+    api_version: '63.0'
   dependencies:
     - github: 'https://github.com/SFDO-Community/Summit-Events-App'
   git:

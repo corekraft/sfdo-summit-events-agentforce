@@ -1,12 +1,25 @@
 {
   "orgName": "sfdo-summit-events-agentforce - Dev Org",
   "edition": "Developer",
+  "features": [
+    "Communities",
+    "Sites",
+    "ForceComPlatform",
+    "EinsteinGPTForDevelopers",
+    "Einstein1AIPlatform"
+  ],
   "settings": {
     "lightningExperienceSettings": {
       "enableS1DesktopEnabled": true
     },
     "chatterSettings": {
       "enableChatter": true
+    },
+    "agentPlatformSettings": {
+      "enableAgentPlatform": true
+    },
+    "einsteinGptSettings" : {
+      "enableEinsteinGptPlatform" : true
     },
     "userManagementSettings": {
       "enableNewProfileUI": true
@@ -19,6 +32,12 @@
     },
     "languageSettings": {
       "enableTranslationWorkbench": true
+    },
+    "experienceBundleSettings": {
+      "enableExperienceBundleMetadata": true
+    },
+    "communitiesSettings": {
+      "enableNetworksEnabled": true
     }
   }
 }
