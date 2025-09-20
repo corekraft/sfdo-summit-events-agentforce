@@ -1,94 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <Bot xmlns="http://soap.sforce.com/2006/04/metadata">
     <agentType>EinsteinServiceAgent</agentType>
     <botMlDomain>
         <label>Summit Event External Registration Agent</label>
         <name>Summit_Event_External_Registration_Agent</name>
     </botMlDomain>
-    <botUser>summit_event_external_registration_agent@00dgk0000059k3x.ext</botUser>
-    <botVersions>
-        <fullName>v1</fullName>
-        <articleAnswersGPTEnabled>false</articleAnswersGPTEnabled>
-        <botDialogs>
-            <botSteps>
-                <botMessages>
-                    <message>Hi, I&apos;m an AI assistant. How can I help you?</message>
-                    <messageIdentifier>28931722-d623-4a5d-9b85-cff06b703a0d</messageIdentifier>
-                </botMessages>
-                <stepIdentifier>07a5ec93-4dc4-41ac-bc36-e63e80ab2a90</stepIdentifier>
-                <type>Message</type>
-            </botSteps>
-            <botSteps>
-                <stepIdentifier>6b8c12df-b81b-4f6f-8637-76725be4bdc6</stepIdentifier>
-                <type>Wait</type>
-            </botSteps>
-            <developerName>Welcome</developerName>
-            <isPlaceholderDialog>false</isPlaceholderDialog>
-            <label>Hi! I&apos;m your helpful bot.</label>
-            <showInFooterMenu>false</showInFooterMenu>
-        </botDialogs>
-        <botDialogs>
-            <botSteps>
-                <botMessages>
-                    <message>Sorry, it looks like something has gone wrong.</message>
-                    <messageIdentifier>6b9da22a-dd21-4fe1-97ee-315a841c7651</messageIdentifier>
-                </botMessages>
-                <stepIdentifier>50c0cff4-6996-44cf-ae4c-b07769ff5088</stepIdentifier>
-                <type>Message</type>
-            </botSteps>
-            <botSteps>
-                <stepIdentifier>2cabd662-2c6d-4fb2-ba6f-de0248652d34</stepIdentifier>
-                <type>Wait</type>
-            </botSteps>
-            <developerName>Error_Handling</developerName>
-            <isPlaceholderDialog>false</isPlaceholderDialog>
-            <label>Unfortunately, a system error occurred. Let us start again.</label>
-            <showInFooterMenu>false</showInFooterMenu>
-        </botDialogs>
-        <botDialogs>
-            <botSteps>
-                <botMessages>
-                    <message>One moment while I connect you to the next available service representative.</message>
-                    <messageIdentifier>3c8fec8c-c00b-41a3-9477-18a96c8fa9de</messageIdentifier>
-                </botMessages>
-                <stepIdentifier>486a2e27-00ff-47f7-aed7-bc44497b131f</stepIdentifier>
-                <type>Message</type>
-            </botSteps>
-            <botSteps>
-                <conversationSystemMessage>
-                    <type>Transfer</type>
-                </conversationSystemMessage>
-                <stepIdentifier>2e561b4b-b909-4b35-afe4-ada042d61e6e</stepIdentifier>
-                <type>SystemMessage</type>
-            </botSteps>
-            <developerName>Transfer_To_Agent</developerName>
-            <isPlaceholderDialog>false</isPlaceholderDialog>
-            <label>Transfer To Agent</label>
-            <showInFooterMenu>false</showInFooterMenu>
-        </botDialogs>
-        <citationsEnabled>false</citationsEnabled>
-        <company>Summit Events</company>
-        <conversationDefinitionPlanners>
-            <genAiPlannerName>Summit_Event_External_Registration_Agent</genAiPlannerName>
-        </conversationDefinitionPlanners>
-        <conversationVariables>
-            <dataType>Text</dataType>
-            <description>This variable may also be referred to as VerifiedCustomerId</description>
-            <developerName>VerifiedCustomerId</developerName>
-            <includeInPrompt>false</includeInPrompt>
-            <label>VerifiedCustomerId</label>
-            <visibility>Internal</visibility>
-        </conversationVariables>
-        <entryDialog>Welcome</entryDialog>
-        <intentDisambiguationEnabled>false</intentDisambiguationEnabled>
-        <intentV3Enabled>false</intentV3Enabled>
-        <knowledgeActionEnabled>false</knowledgeActionEnabled>
-        <knowledgeFallbackEnabled>false</knowledgeFallbackEnabled>
-        <role>You are a digital front office agent, your primary role is to collect registrant information and create Summit Event Registration records</role>
-        <smallTalkEnabled>false</smallTalkEnabled>
-        <surfacesEnabled>false</surfacesEnabled>
-        <toneType>Casual</toneType>
-    </botVersions>
+    <botUser
+  >summit_event_external_registration_agent@00dgk0000059k3x.ext</botUser>
     <contextVariables>
         <contextVariableMappings>
             <SObjectType>MessagingEndUser</SObjectType>
@@ -126,7 +44,8 @@
             <messageType>Text</messageType>
         </contextVariableMappings>
         <dataType>Id</dataType>
-        <description>This variable may also be referred to as MessagingEndUser ContactId</description>
+        <description
+    >This variable may also be referred to as MessagingEndUser ContactId</description>
         <developerName>ContactId</developerName>
         <includeInPrompt>false</includeInPrompt>
         <label>Contact Id</label>
@@ -168,7 +87,8 @@
             <messageType>EmbeddedMessaging</messageType>
         </contextVariableMappings>
         <dataType>Id</dataType>
-        <description>This variable may also be referred to as MessagingEndUser Id</description>
+        <description
+    >This variable may also be referred to as MessagingEndUser Id</description>
         <developerName>EndUserId</developerName>
         <includeInPrompt>true</includeInPrompt>
         <label>End User Id</label>
@@ -210,7 +130,8 @@
             <messageType>Text</messageType>
         </contextVariableMappings>
         <dataType>Text</dataType>
-        <description>This variable may also be referred to as MessagingSession EndUserLanguage</description>
+        <description
+    >This variable may also be referred to as MessagingSession EndUserLanguage</description>
         <developerName>EndUserLanguage</developerName>
         <includeInPrompt>false</includeInPrompt>
         <label>End User Language</label>
@@ -252,12 +173,14 @@
             <messageType>Text</messageType>
         </contextVariableMappings>
         <dataType>Id</dataType>
-        <description>This variable may also be referred to as MessagingSession Id</description>
+        <description
+    >This variable may also be referred to as MessagingSession Id</description>
         <developerName>RoutableId</developerName>
         <includeInPrompt>true</includeInPrompt>
         <label>Routable Id</label>
     </contextVariables>
-    <description>You are an AI Agent whose job is to help collect registrant information and create Summit Event Registration records for Summit Events.</description>
+    <description
+  >You are an AI Agent whose job is to help collect registrant information and create Summit Event Registration records for Summit Events.</description>
     <label>Summit Event External Registration Agent</label>
     <logPrivateConversationData>true</logPrivateConversationData>
     <richContentEnabled>true</richContentEnabled>
