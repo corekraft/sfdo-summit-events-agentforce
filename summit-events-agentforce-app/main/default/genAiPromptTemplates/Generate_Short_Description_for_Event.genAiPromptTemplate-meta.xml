@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier
+  >ExyIgXxyBdlWEicr/5S4qFLCMIqS0wZo2dvMoP5Ai8I=_2</activeVersionIdentifier>
+    <developerName>Generate_Short_Description_for_Event</developerName>
+    <masterLabel>Generate Short Description for Event</masterLabel>
+    <relatedEntity>summit__Summit_Events__c</relatedEntity>
+    <relatedField
+  >summit__Summit_Events__c.summit__Event_Short_Listing_Description__c</relatedField>
+    <templateVersions>
+        <content
+    >You&apos;re a copywriter for a nonprofit or higher education institution. Generate a short description for an event, given its longer description. Ensure the short description is less than 3000 characters. The long description is given below. Now generate the short description.
+
+Long description: {!$Input:summit__Summit_Events__c.summit__Event_description__c}
+
+
+</content>
+        <inputs>
+            <apiName>RelatedEntity</apiName>
+            <definition>SOBJECT://summit__Summit_Events__c</definition>
+            <referenceName>Input:summit__Summit_Events__c</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        <versionIdentifier
+    >ExyIgXxyBdlWEicr/5S4qFLCMIqS0wZo2dvMoP5Ai8I=_1</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content
+    >You&apos;re a copywriter for a nonprofit or higher education institution. Generate a short description for an event, given its long description. Ensure the short description is less than 3000 characters, and ensure it is concise, readable, and clear. The long description is given below. Now generate the short description.
+
+Long description: {!$Input:summit__Summit_Events__c.summit__Event_description__c}
+
+
+</content>
+        <inputs>
+            <apiName>RelatedEntity</apiName>
+            <definition>SOBJECT://summit__Summit_Events__c</definition>
+            <referenceName>Input:summit__Summit_Events__c</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        <versionIdentifier
+    >ExyIgXxyBdlWEicr/5S4qFLCMIqS0wZo2dvMoP5Ai8I=_2</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__fieldCompletion</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<GenAiPlugin
+  xmlns="http://soap.sforce.com/2006/04/metadata"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+>
+    <canEscalate>false</canEscalate>
+    <description>Create top-level events for Summit Events.</description>
+    <developerName>Event_Creation</developerName>
+    <genAiFunctions>
+        <functionName>SEA_Event_Create</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description
+    >If the query is about creating a new event, use the create new event action.</description>
+        <developerName>instruction_0_1757616668493</developerName>
+        <language xsi:nil="true" />
+        <masterLabel>instruction_0_1757616668493</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description
+    >If the query is about updating event details, use the edit event action.</description>
+        <developerName>instruction_1_1757616668493</developerName>
+        <language xsi:nil="true" />
+        <masterLabel>instruction_1_1757616668493</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description
+    >If the query is about configuring event settings, use the configure event action.</description>
+        <developerName>instruction_2_1757616668493</developerName>
+        <language xsi:nil="true" />
+        <masterLabel>instruction_2_1757616668493</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description
+    >You must be sure to include the type of event, the location type, and the audience. This is required information. 
+It is optional to get the start and end dates of this top level event. 
+You should ask for a description of the event. 
+You should clarify that the user will accept the default values for the registration form fields.
+Once the Event is completed, you should ask if they would like to set up an initial occurrence for the event. This task is performed by the Instance Scheduling topic.</description>
+        <developerName>instruction_3_1757616668493</developerName>
+        <language xsi:nil="true" />
+        <masterLabel>instruction_3_1757616668493</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Event Creation</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope
+  >Your job is to only handle the creation of new top-level events, including setting up event details and initial configurations.</scope>
+</GenAiPlugin>

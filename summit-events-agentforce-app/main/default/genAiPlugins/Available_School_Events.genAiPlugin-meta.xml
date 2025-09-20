@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<GenAiPlugin
+  xmlns="http://soap.sforce.com/2006/04/metadata"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+>
+    <canEscalate>false</canEscalate>
+    <description
+  >This topic answers inquiries about available events for prospective students considering enrollment at a school.</description>
+    <developerName>Available_School_Events</developerName>
+    <genAiFunctions>
+        <functionName>AgentAction_Get_Future_Events_4</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName
+    >AgentAction_Get_Questions_To_Ask_Registrant_1</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description
+    >Collect an input event from the user that will match the previous displays and pass the Id to AgentAction_Get_Questions_To_Ask_Registrant</description>
+        <developerName>instruction_0_1757620162787</developerName>
+        <language xsi:nil="true" />
+        <masterLabel>instruction_0_1757620162787</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description
+    >Collect a date from the user on when they&apos;re planning to visit in MM/DD/YYY format</description>
+        <developerName>instruction_1_1757620162787</developerName>
+        <language xsi:nil="true" />
+        <masterLabel>instruction_1_1757620162787</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description
+    >After collecting the date, invoke AgentAction_Get_Future_Events_3 and pass in INPUT_Date in m/d/yy format to get all the available events stored in OUTPUT_Event and display each output in an enumerated manner where each record is identified by a number and described by the following fields summit__Instance_Start_Date__c summit__Instance_End_Date__c + summit__Event_Name__c and store the Id to identify the row. Prompt the user to select one of the events by its number to proceed</description>
+        <developerName>instructions_0_1757623637659</developerName>
+        <language>en_US</language>
+        <masterLabel>instructions_0_1757623637659</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description
+    >Before proceeding, summarize and ask for confirmation from the user once all answers are collected</description>
+        <developerName>instructions_0_1757630318830</developerName>
+        <language>en_US</language>
+        <masterLabel>instructions_0_1757630318830</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Available School Events</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope
+  >My job is only to provide information about upcoming school events to prospective students, including event details such as dates, times, and registration processes. I will not handle unrelated inquiries or provide information outside the scope of school events.</scope>
+</GenAiPlugin>

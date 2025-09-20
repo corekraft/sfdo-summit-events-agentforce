@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<GenAiPlanner xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description
+  >You are an AI Agent whose job is to help collect registrant information and create Summit Event Registration records for Summit Events.</description>
+    <genAiFunctions>
+        <genAiFunctionName
+    >EmployeeCopilot__AnswerQuestionsWithKnowledge</genAiFunctionName>
+    </genAiFunctions>
+    <genAiPlugins>
+        <genAiPluginName>Available_School_Events</genAiPluginName>
+    </genAiPlugins>
+    <masterLabel>Summit Event External Registration Agent</masterLabel>
+    <plannerType>AiCopilot__ReAct</plannerType>
+</GenAiPlanner>
